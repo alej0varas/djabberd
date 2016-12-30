@@ -1,5 +1,5 @@
 import os
-from setuptools import setup
+from setuptools import find_packages, setup
 
 import djabberd
 
@@ -12,7 +12,8 @@ README = ''.join(readme_lines)
 setup(
     name='djabberd',
     version=djabberd.__version__,
-    include_package_data=True,
+    include_package_data=not False,
+    packages=find_packages(),
     license='GPL v3',
     description=description,
     long_description=README,
