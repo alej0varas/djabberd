@@ -1,0 +1,6 @@
+*~
+*.pyc
+/Readme.html
+build/
+dist/
+*.egg-info/
