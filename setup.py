@@ -19,6 +19,7 @@ setup(
     long_description=README,
     author='Alexandre Varas',
     author_email='alej0varas@gmail.com',
+    url='https://github.com/alej0varas/djabberd',
     classifiers=[
         'Development Status :: 4 - Beta',
         'Environment :: Web Environment',
