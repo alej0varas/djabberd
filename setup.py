@@ -3,7 +3,7 @@ from setuptools import find_packages, setup
 
 import djabberd
 
-with open(os.path.join(os.path.dirname(__file__), 'Readme.rst')) as readme:
+with open(os.path.join(os.path.dirname(__file__), 'README.rst')) as readme:
     readme_lines = readme.readlines()
 description = readme_lines[0].strip()
 README = ''.join(readme_lines)
