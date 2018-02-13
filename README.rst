@@ -123,4 +123,5 @@ Running Tests
 =============
 ::
 
+   python setup.py develop
    python runtests.py [tests.<tests_module>[.<TestClass>[.<test_method>]]]
