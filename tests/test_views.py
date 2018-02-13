@@ -161,14 +161,14 @@ class ArchiveGetViewTests(APITestCase):
         self.assertEqual(response.data, mock_handlers.TEST_ARCHIVE_GET)
 
     def test_other_args_used(self):
-        args = 'peer', 'after', 'before', 'limit'
+        args = 'peer', 'after', 'before', 'limit', 'type'
         username = 'True'
         for arg in args:
-            url = self.url + self.args.format(username) + '&' + arg + '=X'
+            url = self.url + self.args.format(username) + '&' + arg + '=asdf'
             self._test_arg(url, username, arg)
 
     def _test_arg(self, url, username, arg):
         with mock.patch('djabberd.handlers.archive_get', autospec=True) as mh:
             request = factory.get(url)
             views.ArchiveView().as_view()(request)
-            mh.assert_called_with(username, **{arg: 'X'})
+            mh.assert_called_with(username, **{arg: 'asdf'})

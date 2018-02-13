@@ -32,5 +32,5 @@ def archive_store(payload):
     pass
 
 
-def archive_get(username, peer=None, after=None, before=None, limit=None):
+def archive_get(username, peer=None, after=None, before=None, limit=None, type=None):
     return TEST_ARCHIVE_GET

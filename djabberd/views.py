@@ -85,11 +85,9 @@ class ArchiveView(InsecureAPIView):
             return Response(status=status.HTTP_401_UNAUTHORIZED)
 
         # Get args from query string to pass the to the handler
-        args = request.GET.copy()
+        args = dict(list(request.GET.copy().items()))
         # We don't want `username` in args later
         args.pop('username')
-        # values are lists so we pick only the first element of each
-        args = {k: v[0] for k, v in args.items()}
 
         archive = handlers.archive_get(username, **args)
 
