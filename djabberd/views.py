@@ -88,6 +88,10 @@ class ArchiveView(InsecureAPIView):
         args = dict(list(request.GET.copy().items()))
         # We don't want `username` in args later
         args.pop('username')
+        # Rename `type` to `chat_type`
+        chat_type = args.pop('type', None)
+        if chat_type is not None:
+            args['chat_type'] = chat_type
 
         archive = handlers.archive_get(username, **args)
 

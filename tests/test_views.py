@@ -161,7 +161,7 @@ class ArchiveGetViewTests(APITestCase):
         self.assertEqual(response.data, mock_handlers.TEST_ARCHIVE_GET)
 
     def test_other_args_used(self):
-        args = 'peer', 'after', 'before', 'limit', 'type'
+        args = 'peer', 'after', 'before', 'limit', 'chat_type'
         username = 'True'
         for arg in args:
             url = self.url + self.args.format(username) + '&' + arg + '=asdf'

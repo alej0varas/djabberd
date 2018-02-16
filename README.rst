@@ -68,7 +68,7 @@ There must be one function for each endpoint that should be implemented like thi
   - Returns `True` if message has been stored
   - Returns a string containing an error message if message has *not* been stored
 
-* archive_get(username[, peer, after, before, limit, type])
+* archive_get(username[, peer, after, before, limit, chat_type])
 
   - Returns the message history in JSON format
   - Returns `False` in any other case
